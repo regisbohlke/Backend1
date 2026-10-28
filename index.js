@@ -1,22 +1,23 @@
-const express = require("express")
-const app = express()
-const PORT = 3000
 
-//codigo node com as rotas
+const express = require("express");
+const app = express();
+const PORT = 3000;
+
+// Rota principal
 app.get('/', (req, res) => {
-    res.send('Bem-vindo ao site da Marvel e DC');
+    res.send('Bem-vindo ao site da Marvel e DC!');
 });
 
+// Rota da Marvel
 app.get('/marvel', (req, res) => {
-   res.send('Este é o universo de heróis da Marvel');
+    res.send('Este é o universo de heróis da Marvel.');
 });
 
+// Rota da DC
 app.get('/dc', (req, res) => {
-    res.send('Este é o universo de heróis da DC');
+    res.send('Este é o universo de heróis da DC.');
 });
 
-app.listen(3000, () => {
-    console.log('Servidor rodando na porta 3000');
+app.listen(PORT, () => {
+    console.log(`Servidor rodando na porta ${PORT}`);
 });
-
-console.log("Oi Node");
